@@ -4,7 +4,7 @@ This app generates keyword ideas for Google Ads and other platforms. You can add
 
 Background:
 ----------------------------------------------------
-I'm woring on a Google Ads campaign for a client and needed a way to generate keyword ideas.
+I'm working on a Google Ads campaign for a client and needed a way to generate keyword ideas.
 
 Technology:
 ----------------------------------------------------
