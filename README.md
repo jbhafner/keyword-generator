@@ -1,5 +1,7 @@
 # Keyword Generator
 
+Live URL: https://brianhafnertech.com/Apps/keywordPlanner/
+
 This app generates keyword ideas for Google Ads and other platforms. You can add three groups of words and it will combine them in different arrangements.  This could also be used to create domain name ideas for new businesses or products.
 
 Background:
