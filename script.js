@@ -1,16 +1,20 @@
 $("document").ready(function() {
-  console.log("scripts.js connected!");
+  $('.button-collapse').sideNav({
+    closeOnClick:true
+  });
+  // console.log($('.slider'))
 });
 
 // Add event listener for clearAll
-let clearAll = document.querySelector("#clearAll");
+let clearAll = document.querySelector(".clearAll");
 clearAll.addEventListener("click", function(event) {
   event.preventDefault();
+  console.log("clicked");
   location.reload();
 });
 
 // Add event listener for AddSampleData
-let addSampleData = document.querySelector("#addSampleData");
+let addSampleData = document.querySelector(".addSampleData");
 addSampleData.addEventListener("click", function(event) {
   console.log("clicked");
   event.preventDefault();
@@ -18,7 +22,7 @@ addSampleData.addEventListener("click", function(event) {
 });
 
 // Add event listener for ShowResults
-let showResults = document.querySelector("#showResults");
+let showResults = document.querySelector(".showResults");
 showResults.addEventListener("click", function(event) {
   event.preventDefault();
   fnShowResults();

@@ -2,42 +2,57 @@
 <html>
 
 <head>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"
-    media="screen,projection" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <link type="text/css" rel="stylesheet" href="style.css" <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-  <div class="containter">
-    <div class="card-panel">
-      <h1>Keyword Generator</h1>
-    </div>
-  </div>
-  <div class="navbar-fixed">
+  <header>
+
     <nav>
       <div class="nav-wrapper">
         <a href="#" class="brand-logo"> Keyword Planner</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <ul class="right hide-on-med-and-down">
           <li>
-            <a id="clearAll">Clear All Data</a>
+            <a class="clearAll">Clear All Data</a>
           </li>
           <li>
-            <a id="addSampleData">Add Sample Data</a>
+            <a class="addSampleData">Add Sample Data</a>
           </li>
           <li>
-            <a id="showResults">Show Results</a>
+            <a class="showResults">Show Results</a>
           </li>
         </ul>
       </div>
     </nav>
+
+
+
+    <ul class="side-nav" id="mobile-demo">
+      <li>
+        <a class="clearAll" onclick="location.reload()">Clear All Data</a>
+      </li>
+      <li>
+        <a class="addSampleData" onclick="createSampleData()">Add Sample Data</a>
+      </li>
+      <li>
+        <a class="showResults" onclick="fnShowResults()">Show Results</a>
+      </li>
+    </ul>
+
+  </header>
+
+
+  <div class="containter">
+    <div class="card-panel">
+      <h1>Keyword Generator</h1>
+    </div>
   </div>
 
   <div class="row">
@@ -83,8 +98,6 @@
     </div>
 
     <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="sampleWords.js"></script>
 
