@@ -64,19 +64,39 @@
       </form>
    </div>
 
+   <div class="btn-group">
+      <button>Apple</button>
+      <button>Samsung</button>
+      <button>Sony</button>
+   </div>
+
    <!- Results Area ->
       <div class="row">
          <fieldset class="col s12" action="#">
 
             <input name="grp-broad" type="button" checked value="Broad" />
 
-            <input name="grp-BMM" type="radio" />
+            <input name="grp-BMM" type="button" checked value="BMM" />
 
-            <input class="with-gap" name="grp-phrase" type="radio" />
+            <input name="grp-phrase" type="button" checked value="phrase" />
 
-            <input name="grp-Exact" type="radio" disabled="disabled" />
+            <input name="grp-Exact" type="button" checked value="Exact" />
 
          </fieldset>
+      </div>
+
+      <div class="row">
+         <form class="col s12" action="#" id="radioGroup">
+
+            <input name="matchType" type="radio" value="Broad" checked="checked" />
+
+            <input name="matchType" type="radio" value="BMM" />
+
+            <input name="matchType" type="radio" value="phrase" />
+
+            <input name="matchType" type="radio" value="Exact" />
+
+         </form>
       </div>
 
       <div class="row">

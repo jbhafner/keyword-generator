@@ -5,6 +5,15 @@ $("document").ready(function() {
   // console.log($('.slider'))
 });
 
+document.getElementById('radioGroup').onsubmit = function() {
+  // this (keyword) refers to form to which onsubmit attached
+  // 'matchType' is name of radio button group
+  var val = getRadioVal(this, 'matchType');
+  // display value obtained
+  alert(val);
+  // more code here ...
+}
+
 // Add event listener for clearAll
 let clearAll = document.querySelector(".clearAll");
 clearAll.addEventListener("click", function(event) {
@@ -72,4 +81,20 @@ function fnShowResults() {
   console.log("count", count);
   $("#resultsArea").text(txtAllResults);
   $("#resultsCount").text("Results Count Total: " + count);
+}
+
+function getRadioVal(form, name) {
+  var val;
+  // get list of radio buttons with specified name
+  var radios = form.elements[name];
+  
+  // loop through list of radio buttons
+  for (var i=0, len=radios.length; i<len; i++) {
+      if ( radios[i].checked ) { // radio checked?
+          val = radios[i].value; // if so, hold its value in val
+          break; // and break out of for loop
+      }
+  }
+  console.log(val);
+  return val; // return value of checked radio or undefined if none checked
 }

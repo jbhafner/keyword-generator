@@ -42,3 +42,7 @@ body > div.row > form {
 .brand-logo {
    margin-left: 20px;
 }
+
+#btn-group {
+   align-content: center;
+}
