@@ -85,17 +85,17 @@
          </fieldset>
       </div>
 
-      <div class="row">
+      <div id="radioGroupPicker" class="row">
          <form class="col s12" action="#" id="radioGroup">
 
-            <input name="matchType" type="radio" value="Broad" checked="checked" />
-
-            <input name="matchType" type="radio" value="BMM" />
-
-            <input name="matchType" type="radio" value="phrase" />
-
-            <input name="matchType" type="radio" value="Exact" />
-
+            <input id="broad" name="matchType" type="radio" value="Broad" checked="checked" />
+            <label for="broad">Broad</label>
+            <input id="bmm" name="matchType" type="radio" value="BMM" />
+            <label for="bmm">BMM</label>
+            <input id="phrase" name="matchType" type="radio" value="Phrase" />
+            <label for="phrase">Phrase</label>
+            <input id="exact" name="matchType" type="radio" value="Exact" />
+            <label for="exact">Exact</label>
          </form>
       </div>
 

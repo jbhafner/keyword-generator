@@ -20,29 +20,29 @@
 
         <ul class="right hide-on-med-and-down">
           <li>
-            <a class="clearAll">Clear All Data</a>
+            <a class="clearAll" onclick="location.reload()>Clear All Data</a>
           </li>
           <li>
-            <a class="addSampleData">Add Sample Data</a>
+            <a class=" addSampleData" onclick="createSampleData()>Add Sample Data</a>
           </li>
           <li>
-            <a class="showResults">Show Results</a>
+            <a class=" showResults" onclick="fnShowResults()>Show Results</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <ul class="side-nav" id="mobile-demo">
-      <li>
-        <a class="clearAll" onclick="location.reload()">Clear All Data</a>
-      </li>
-      <li>
-        <a class="addSampleData" onclick="createSampleData()">Add Sample Data</a>
-      </li>
-      <li>
-        <a class="showResults" onclick="fnShowResults()">Show Results</a>
-      </li>
-    </ul>
+    <ul class=" side-nav" id="mobile-demo">
+          <li>
+            <a class="clearAll" onclick="location.reload()">Clear All Data</a>
+          </li>
+          <li>
+            <a class="addSampleData" onclick="createSampleData()">Add Sample Data</a>
+          </li>
+          <li>
+            <a class="showResults" onclick="fnShowResults()">Show Results</a>
+          </li>
+        </ul>
   </header>
 
 
@@ -76,9 +76,21 @@
     </form>
   </div>
 
+  <div id="radioGroupPicker" class="row">
+    <form class="col s12" action="#" id="radioGroup">
+
+      <input id="broad" name="matchType" type="radio" value="Broad" checked="checked" />
+      <label for="broad">Broad</label>
+      <input id="bmm" name="matchType" type="radio" value="BMM" />
+      <label for="bmm">BMM</label>
+      <input id="phrase" name="matchType" type="radio" value="Phrase" />
+      <label for="phrase">Phrase</label>
+      <input id="exact" name="matchType" type="radio" value="Exact" />
+      <label for="exact">Exact</label>
+    </form>
+  </div>
+
   <!- Results Area ->
-
-
     <div class="row">
       <form class="col s12">
 
@@ -89,6 +101,7 @@
             <textarea id="resultsArea" class="materialize-textarea"></textarea>
             <p id="resultsCount">Results Count</p>
           </div>
+          <p><a href="#">Copy Results</a></p>
         </div>
       </form>
     </div>

@@ -55,7 +55,10 @@ function createSampleData() {
 }
 
 function fnShowResults() {
+  const matchType = $('input[name="matchType"]:checked').val();
+  console.log('radioGroup selection: ', matchType);
   let arrAllResults = [];
+  let arrTemp='';
   const group1 = $("#textarea1").text();
   const group2 = $("#textarea2").text();
   const group3 = $("#textarea3").text();
@@ -67,11 +70,33 @@ function fnShowResults() {
   array1.forEach(function(grp1keyWord) {
     array2.forEach(function(grp2keyWord) {
       array3.forEach(function(grp3keyWord) {
-        arrAllResults.push(`${grp1keyWord} ${grp2keyWord} ${grp3keyWord}`);
+        if (matchType==="Broad") {
+          arrAllResults.push(`${grp1keyWord} ${grp2keyWord} ${grp3keyWord}`);
+        }
+        if (matchType==="BMM") {
+          arrAllResults.push(`+${grp1keyWord} +${grp2keyWord} +${grp3keyWord}`);
+        }
+        if (matchType==="Phrase") {
+          console.log('hello');
+          arrTemp=`${grp1keyWord} ${grp2keyWord} ${grp3keyWord}`;
+          console.log(arrTemp);
+          console.log(`"${arrTemp}"`);
+          arrAllResults.push(`"${arrTemp}"`);
+        }
+        if (matchType==="Exact") {
+          arrAllResults.push(`[${grp1keyWord} ${grp2keyWord} ${grp3keyWord}]`);
+        }
       });
     });
   });
   console.log(arrAllResults);
+  
+  // // Trim white spaces off strings
+  // const trimArray = arrAllResults.map(function(string) {
+  //   return string.trim();
+  // });
+  // console.log('trimArray',trimArray);
+
   let count = arrAllResults.length;
   let txtAllResults = "";
   arrAllResults.forEach(function(mergedKeyword) {
@@ -83,18 +108,3 @@ function fnShowResults() {
   $("#resultsCount").text("Results Count Total: " + count);
 }
 
-function getRadioVal(form, name) {
-  var val;
-  // get list of radio buttons with specified name
-  var radios = form.elements[name];
-  
-  // loop through list of radio buttons
-  for (var i=0, len=radios.length; i<len; i++) {
-      if ( radios[i].checked ) { // radio checked?
-          val = radios[i].value; // if so, hold its value in val
-          break; // and break out of for loop
-      }
-  }
-  console.log(val);
-  return val; // return value of checked radio or undefined if none checked
-}
