@@ -5,15 +5,6 @@ $("document").ready(function() {
   // console.log($('.slider'))
 });
 
-document.getElementById('radioGroup').onsubmit = function() {
-  // this (keyword) refers to form to which onsubmit attached
-  // 'matchType' is name of radio button group
-  var val = getRadioVal(this, 'matchType');
-  // display value obtained
-  alert(val);
-  // more code here ...
-}
-
 // Add event listener for clearAll
 let clearAll = document.querySelector(".clearAll");
 clearAll.addEventListener("click", function(event) {
@@ -90,12 +81,6 @@ function fnShowResults() {
     });
   });
   console.log(arrAllResults);
-  
-  // // Trim white spaces off strings
-  // const trimArray = arrAllResults.map(function(string) {
-  //   return string.trim();
-  // });
-  // console.log('trimArray',trimArray);
 
   let count = arrAllResults.length;
   let txtAllResults = "";
@@ -108,3 +93,9 @@ function fnShowResults() {
   $("#resultsCount").text("Results Count Total: " + count);
 }
 
+// Copy results to clipboard
+function copy() {
+  var copyText = document.querySelector("#resultsArea");
+  copyText.select();
+  document.execCommand("copy");
+}
