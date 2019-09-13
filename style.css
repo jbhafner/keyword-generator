@@ -1,3 +1,4 @@
+
 row {
    margin-left: 10px;
    margin-right: 20px;
@@ -14,10 +15,16 @@ textarea {
 
 }
 
+form {
+   display: flex;
+   flex-wrap: wrap;
+}
+
 form .materialize-textarea {
    width: 200px;
    height: 150px;
    padding: 12px 20px;
+   margin-bottom: 0px;
    box-sizing: border-box;
    border: 2px solid #ccc;
    border-radius: 4px;
@@ -62,4 +69,24 @@ body > div.row > form {
 #radioGroupHeader {
    display: flex;
    align-items: center;
+}
+
+
+@media screen and (max-width: 690px) {
+   #resultsArea{
+      width: 200px;
+      height: 150px;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      resize: none;
+      overflow-y: scroll;
+   }
+   
+   #radioGroup {
+      flex-direction: column;
+   }
+   
 }
