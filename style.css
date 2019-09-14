@@ -71,6 +71,9 @@ body > div.row > form {
    align-items: center;
 }
 
+.cardPanelHeader {
+   text-shadow: grey 5px 5px 20px;
+}
 
 @media screen and (max-width: 690px) {
    #resultsArea{
