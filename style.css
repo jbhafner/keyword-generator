@@ -75,6 +75,10 @@ body > div.row > form {
    text-shadow: grey 5px 5px 20px;
 }
 
+body > header > nav > div > ul {
+   margin-right: 20px;
+}
+
 @media screen and (max-width: 690px) {
    #resultsArea{
       width: 200px;
