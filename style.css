@@ -79,6 +79,7 @@ body > header > nav > div > ul {
    margin-right: 20px;
 }
 
+
 @media screen and (max-width: 690px) {
    #resultsArea{
       width: 200px;
