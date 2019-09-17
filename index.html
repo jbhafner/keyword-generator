@@ -13,26 +13,28 @@
 
 <body>
   <header>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo"> Keyword Planner</a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-          <li>
-            <a class="clearAll" onclick="location.reload()">Clear Data</a>
-          </li>
-          <li>
-            <a class=" addSampleData" onclick="createSampleData()">Add Sample Data</a>
-          </li>
-          <li>
-            <a class=" showResults" onclick="fnShowResults()">Show Results</a>
-          </li>
-          <li>
-            <a id=" copy" onclick="copy()">Copy Results</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo"> Keyword Planner</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a class="clearAll" onclick="location.reload()">Clear Data</a>
+            </li>
+            <li>
+              <a class=" addSampleData" onclick="createSampleData()">Add Sample Data</a>
+            </li>
+            <li>
+              <a class=" showResults" onclick="fnShowResults()">Show Results</a>
+            </li>
+            <li>
+              <a id=" copy" onclick="copy()">Copy Results</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
 
     <ul class=" side-nav" id="mobile-demo">
       <li>

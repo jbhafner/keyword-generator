@@ -50,12 +50,13 @@ function fnShowResults() {
   console.log('radioGroup selection: ', matchType);
   let arrAllResults = [];
   let arrTemp='';
-  const group1 = $("#textarea1").text();
-  const group2 = $("#textarea2").text();
-  const group3 = $("#textarea3").text();
-  array1 = group1.split("\r\n");
-  array2 = group2.split("\r\n");
-  array3 = group3.split("\r\n");
+  const group1 = $("#textarea1").val();
+  const group2 = $("#textarea2").val();
+  const group3 = $("#textarea3").val();
+ 
+  const array1 = group1.split(/\r?\n/);
+  const array2 = group2.split(/\r?\n/);
+  const array3 = group3.split(/\r?\n/);
   console.log(group1);
   console.log(array1);
   array1.forEach(function(grp1keyWord) {
